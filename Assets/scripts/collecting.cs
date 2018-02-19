@@ -20,7 +20,7 @@ public class collecting : MonoBehaviour {
 	void OnTriggerEnter (Collider c) {
 		if (c.gameObject.CompareTag ("Player")) {
 			Debug.Log ("oy nice food");
-			Destroy(gameObject, 1);
+			Destroy(gameObject, .3f);
 		}
 	
 	
