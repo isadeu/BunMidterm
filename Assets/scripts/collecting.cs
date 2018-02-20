@@ -1,14 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class collecting : MonoBehaviour {
-	public int count; 
+	/*public int count; 
+	public Text countText;*/
 
 	// Use this for initialization
 	void Start () {
-		count = 0; 
-		
+		/*count = 0; 
+		countText.text = "snacks munched: " + count.ToString () + "/3";
+
+*/		
 	}
 	
 	// Update is called once per frame
@@ -19,9 +23,11 @@ public class collecting : MonoBehaviour {
 
 	void OnTriggerEnter (Collider c) {
 		if (c.gameObject.CompareTag ("Player")) {
-			Debug.Log ("oy nice food");
 			Destroy(gameObject, .3f);
-		}
+			/*count = count +1; //count += 1; 
+			countText.text = "snacks munched: " + count.ToString () + "/3";
+*/
+}
 	
 	
 	}

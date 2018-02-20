@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/scenes/OP.unity
+    guid: b882adb2857984569ad6fdd53fb47713
+  - enabled: 1
     path: Assets/scenes/hackyard.unity
     guid: 6fa54192cde6e4ec3bebd6536b6ebe35
   - enabled: 1
