@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class seecount : MonoBehaviour {
 
@@ -27,6 +28,11 @@ public class seecount : MonoBehaviour {
 			Debug.Log ("oy nice food +1");
 			count = count + 1; //count += 1; 
 			countText.text = "snacks munched: " + count.ToString () + "/3";
+		}
+		if (count == 3) {
+			print ("you won");
+			SceneManager.LoadScene ("OP");
+		
 		}
 	}
 }

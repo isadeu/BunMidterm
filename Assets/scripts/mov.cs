@@ -8,10 +8,11 @@ public class mov : MonoBehaviour {
 	public float rotSpeed = 230.0f;
 	public float forSpeed = 100f;
 	public float jumpspeed = 8f;
-	public bool isitgoing = false;
-	public GameObject player;
+	public Rigidbody rigbig;
+	//public GameObject player;
 	void Start () {
-
+		
+		rigbig = GetComponent<Rigidbody>();
 	}
 
 	// Update is called once per frame
@@ -32,6 +33,12 @@ public class mov : MonoBehaviour {
 
 			//transform.Translate (Time.deltaTime * 30f);
 		}
+
+		//if (Input.GetKeyUp (KeyCode.F)) {
+			//rigbig.AddForceAtPosition (direction.normalized, transform.position); //(transform.forward * 9000);
+
+			//rotSpeed = 2f;
+		//}
 
 
 	}
