@@ -23,7 +23,7 @@ public class collecting : MonoBehaviour {
 
 	void OnTriggerEnter (Collider c) {
 		if (c.gameObject.CompareTag ("Player")) {
-			Destroy(gameObject, .3f);
+			Destroy(gameObject);
 			/*count = count +1; //count += 1; 
 			countText.text = "snacks munched: " + count.ToString () + "/3";
 */
