@@ -19,12 +19,34 @@ public class mov : MonoBehaviour {
 	void Update () {
 
 		var x = Input.GetAxis ("Horizontal") * Time.deltaTime * rotSpeed; //150  rotation
-		var z = Input.GetAxis("Vertical") * Time.deltaTime * forSpeed; //3
+		var z = Input.GetAxis ("Vertical") * Time.deltaTime * forSpeed; //3
 
-		transform.Rotate(0, x, 0);
-		transform.Translate(0, 0, z);
+		transform.Rotate (0, x, 0);
+		transform.Translate (0, 0, z);
+	}
 
-		if (Input.GetKeyDown (KeyCode.Space)) {
+	//speedup
+	void OnTriggerEnter (Collider c) {
+		if (c.gameObject.CompareTag ("grass")) {
+			rotSpeed = 400f;
+			forSpeed = 200;
+		
+		}
+	}
+	void OnTriggerExit (Collider c) {
+		if (c.gameObject.CompareTag ("grass")) {
+			rotSpeed = 230.0f;
+			forSpeed = 100f;
+			
+		}
+	
+	}
+	
+				/*count = count +1; //count += 1; 
+			countText.text = "snacks munched: " + count.ToString () + "/3";
+*/
+
+	/*	if (Input.GetKeyDown (KeyCode.Space)) {
 			Debug.Log ("spacing");
 			GetComponent<Rigidbody> ().velocity = Vector3.up * jumpspeed;
 			Physics.gravity = new Vector3 (0,-10,0);
@@ -33,6 +55,7 @@ public class mov : MonoBehaviour {
 
 			//transform.Translate (Time.deltaTime * 30f);
 		}
+		*/
 
 		//if (Input.GetKeyUp (KeyCode.F)) {
 			//rigbig.AddForceAtPosition (direction.normalized, transform.position); //(transform.forward * 9000);
@@ -42,4 +65,3 @@ public class mov : MonoBehaviour {
 
 
 	}
-}
