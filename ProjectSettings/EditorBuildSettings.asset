@@ -14,3 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scenes/GO.unity
     guid: bca9c8b25a73448ea8f5ba73687f40ec
+  - enabled: 1
+    path: Assets/scenes/WinSc.unity
+    guid: 49ce424b2034f4abebd00bdeb29ef47f

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class collecting : MonoBehaviour {
-	/*public int count; 
-	public Text countText;*/
+public class collecting : MonoBehaviour { 
+	//public Text countText;
 
 	// Use this for initialization
 	void Start () {
@@ -23,11 +23,11 @@ public class collecting : MonoBehaviour {
 
 	void OnTriggerEnter (Collider c) {
 		if (c.gameObject.CompareTag ("Player")) {
-			Destroy(gameObject);
+			Destroy (gameObject);
 			/*count = count +1; //count += 1; 
 			countText.text = "snacks munched: " + count.ToString () + "/3";
 */
-}
+		}
 	
 	
 	}

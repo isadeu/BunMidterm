@@ -31,7 +31,7 @@ public class seecount : MonoBehaviour {
 		}
 		if (count == 3) {
 			print ("you won");
-			SceneManager.LoadScene ("OP");
+			SceneManager.LoadScene ("WinSc");
 		
 		}
 	}
