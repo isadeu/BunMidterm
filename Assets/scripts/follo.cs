@@ -11,17 +11,20 @@ public class follo : MonoBehaviour
 	public int MoveSpeed = 4;
 	public int MaxDist = 10;
 	public int MinDist = 5;
-
+	UnityEngine.AI.NavMeshAgent agent;
 
 
 
 	void Start()
 	{
-
+		agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+	
 	}
 
 	void Update()
 	{
+
+		agent.destination = Player.position;
 		transform.LookAt(Player);
 
 		if (Vector3.Distance(transform.position, Player.position) >= MinDist)

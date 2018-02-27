@@ -9,6 +9,7 @@ public class mov : MonoBehaviour {
 	public float forSpeed = 100f;
 	public float jumpspeed = 8f;
 	public Rigidbody rigbig;
+	public float floaty = -100;
 	//public GameObject player;
 	void Start () {
 		
@@ -18,11 +19,21 @@ public class mov : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		var x = Input.GetAxis ("Horizontal") * Time.deltaTime * rotSpeed; //150  rotation
-		var z = Input.GetAxis ("Vertical") * Time.deltaTime * forSpeed; //3
+
+		//miovement
+		var x = Input.GetAxis ("Horizontal") * Time.deltaTime * rotSpeed;
+		var z = Input.GetAxis ("Vertical") * Time.deltaTime * forSpeed;
 
 		transform.Rotate (0, x, 0);
 		transform.Translate (0, 0, z);
+
+		//jumpign
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			Debug.Log ("spacing");
+			GetComponent<Rigidbody> ().velocity = Vector3.up * jumpspeed;
+			Physics.gravity = new Vector3 (0, floaty, 0);
+		}
+
 	}
 
 	//speedup
@@ -39,29 +50,14 @@ public class mov : MonoBehaviour {
 			forSpeed = 100f;
 			
 		}
-	
-	}
-	
-				/*count = count +1; //count += 1; 
-			countText.text = "snacks munched: " + count.ToString () + "/3";
-*/
 
-	/*	if (Input.GetKeyDown (KeyCode.Space)) {
-			Debug.Log ("spacing");
-			GetComponent<Rigidbody> ().velocity = Vector3.up * jumpspeed;
-			Physics.gravity = new Vector3 (0,-10,0);
 
 			//GameObject.rigidbody. AddForce(Vector3.up * jumphight)
 
 			//transform.Translate (Time.deltaTime * 30f);
 		}
-		*/
-
-		//if (Input.GetKeyUp (KeyCode.F)) {
-			//rigbig.AddForceAtPosition (direction.normalized, transform.position); //(transform.forward * 9000);
-
-			//rotSpeed = 2f;
-		//}
+		
+	
 
 
 	}

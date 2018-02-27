@@ -9,7 +9,7 @@ public class dash : MonoBehaviour {
 	public float maxDashTime = 6f;
 	public float dashSpeed = 1f;
 	public float dashStoppingSpeed = 0.1f;
-	private float currentDashTime = 10;
+//	private float currentDashTime = 10;
 	public bool dashing = false;
 
 
