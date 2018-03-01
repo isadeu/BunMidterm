@@ -241,11 +241,6 @@ Prefab:
       propertyPath: m_Name
       value: snakcs(2)
       objectReference: {fileID: 0}
-    - target: {fileID: 114922200317379536, guid: 69c5d77843962493c91799c502cb4216,
-        type: 2}
-      propertyPath: rotationspeed
-      value: 150
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 69c5d77843962493c91799c502cb4216, type: 2}
   m_IsPrefabParent: 0

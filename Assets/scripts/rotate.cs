@@ -7,7 +7,6 @@ public class rotate : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Debug.Log("why isnt this printing");
 
 		
 	}
