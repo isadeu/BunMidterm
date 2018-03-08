@@ -24,7 +24,7 @@ public class restart : MonoBehaviour {
 
 	void TaskOnClick()
 	{
-		SceneManager.LoadScene ("OP");
+		SceneManager.LoadScene ("hackyard");
 	
 	}
 }

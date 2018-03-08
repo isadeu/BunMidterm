@@ -27,9 +27,9 @@ public class seecount : MonoBehaviour {
 		if (c.gameObject.CompareTag ("snack")) {
 			Debug.Log ("oy nice food +1");
 			count = count + 1; //count += 1; 
-			countText.text = "snacks munched: " + count.ToString () + "/3";
+			countText.text = "snacks munched: " + count.ToString () + "/6";
 		}
-		if (count == 3) {
+		if (count == 6) {
 			print ("you won");
 			SceneManager.LoadScene ("WinSc");
 		
